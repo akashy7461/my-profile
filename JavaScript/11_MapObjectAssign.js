@@ -32,8 +32,10 @@ mapobject.set(hdfc_bank);
 mapobject.set(panjab_bank);
 console.error("---------------------------add all object element in a map--------");
 console.log(mapobject);
-console.error("-----------Traverse Map Using For of loop log in only bankName and account_no, interest_rate----------");
 const keyofmap=mapobject.keys();
+console.log(keyofmap);
+console.error("-----------Traverse Map Using For of loop log in only bankName and account_no, interest_rate----------");
+
 for(const element of keyofmap)
 {
 
