@@ -24,19 +24,18 @@ const panjab_bank=new Bank("PANJAB BANK","panjab","54265387150","PANJAB0765",8.4
 console.log(panjab_bank);
 
 const mapobject=new Map();
-mapobject.set(axis_bank);
-mapobject.set(sbi_bank);
-mapobject.set(icic_bank);
-mapobject.set(kotak_bank);
-mapobject.set(hdfc_bank);
-mapobject.set(panjab_bank);
+mapobject.set(axis_bank.account_no,axis_bank);
+mapobject.set(sbi_bank.account_no,sbi_bank);
+mapobject.set(icic_bank.account_no,icic_bank);
+mapobject.set(kotak_bank.kotak_bank,kotak_bank);
+mapobject.set(hdfc_bank.account_no,hdfc_bank);
+mapobject.set(panjab_bank.account_no,panjab_bank);
 console.error("---------------------------add all object element in a map--------");
 console.log(mapobject);
-const keyofmap=mapobject.keys();
-console.log(keyofmap);
+
 console.error("-----------Traverse Map Using For of loop log in only bankName and account_no, interest_rate----------");
 
-for(const element of keyofmap)
+for(const element of mapobject.values())
 {
 
     console.log(`Bank Details: BANK NAME:${element.bankName}, ACCOUNT_NO:${element.account_no} ,INTEREST RATE: ${element.interest_rate
