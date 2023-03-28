@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise time!</title>
+    </head>
+    <body>
+        <main>
+            <div id="overview">
+                <h1 id="one">HTML & JavaScript are crucial technologies</h1>
+                <p>The ewb would not work without them...</p>
+            </div>
+
+            
+            <div id="advantages">
+                <ul>
+                    <li class="liItem">Flexible</li>
+                    <li class="liItem">Available</li>
+                    <li class="liItem">Magical</li>
+                </ul>
+            </div>
+        </main>
+        <script>
+            console.log("-----------API to select getElementById by id---------");
+            const selectid=document.getElementById("one");
+            console.log(selectid.innerHTML);
+
+            console.log("-----------API to select getElementsByClassName by class name---------");
+            const listitem=document.getElementsByClassName("liItem");
+            console.log(listitem[1].innerHTML);
+
+            console.log("-----------API to  querySelectorAll() select by class ---------");
+
+            const advDiv = document.querySelectorAll('#advantages')[0];
+            console.log(advDiv.innerHTML);
+        </script>
+    </body>
+</html>
