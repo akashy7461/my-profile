@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Check number is Prime or Not</title>
+    </head>
+    
+    <body>
+        <button id="isPrime">Check No is Prime Or Not</button>
+    </body>
+    
+    <script>
+        const buttonEvent = document.querySelector("#isPrime"); // Use # to select by ID
+        buttonEvent.addEventListener("click", () => {
+            const inputValue = parseInt(prompt("Please Enter The Number:",0)); // Prompt returns a string, so parse it to an integer
+            
+            let isPrime = true;
+            for(let i = 2; i < inputValue; i++) {
+              if(inputValue % i === 0) {
+                isPrime = false;
+                break; // No need to continue the loop once a factor is found
+              }
+            }
+            
+            if (isPrime) {
+              console.log(`Number is prime: ${inputValue}`);
+            } else {
+              console.log(`Number is not prime: ${inputValue}`);
+            }
+        });
+    </script>
+</html>
